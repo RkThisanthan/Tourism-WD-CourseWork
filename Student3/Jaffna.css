@@ -1,0 +1,22 @@
+body {
+    background-image: url(Asserts/Jaffna2.jpg);
+    background-size: 1380px 800px;
+    background-repeat: no-repeat;
+    margin: 0;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(131, 129, 129);
+
+}
+
+.dis {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}

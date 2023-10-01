@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkout_style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="Page_Editor1.html" class="logo"
+            ><img src="logo.png" alt="Logo" />
+          </a>
+        </li>
+        <li><a href="../Student2/MainPage.html">Home</a></li>
+        <li><a href="cart.html">Shop</a></li>
+        <li><a href="../Student3/Quiz.html">Quiz</a></li>
+        <li><a href="../Student4/ImageGallery.html">Gallery</a></li>
+        <li><a href="../Student4/SiteMap.html">Site Map</a></li>
+        <li><a href="../Student2/Comments.html">Comments</a></li>
+        <li><a href="../Student3/AboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <form action="">
+        <div class="row">
+          <div class="col">
+            <h3 class="title">billing address</h3>
+
+            <div class="inputBox">
+              <span>full name :</span>
+              <input type="text" placeholder="Methma Jayasooriya" required/>
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input type="email" placeholder="methma.20223141@iit.ac.lk" required/>
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input type="text" placeholder="Harigala,Atala." />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input type="text" placeholder="Kegalle" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>province :</span>
+                <input type="text" placeholder="Sabaragamuwa" />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input type="text" placeholder="123 456" required maxlength="5"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="title">payment</h3>
+
+            <div class="inputBox">
+              <span>cards accepted :</span>
+              <img src="images/card_img.png" alt="" />
+            </div>
+            <div class="inputBox">
+              <span>name on card :</span>
+              <input type="text" placeholder="Miss Methma Jayasooriya" />
+            </div>
+            <div class="inputBox">
+              <span>credit card number :</span>
+              <input type="number" placeholder="1111-2222-3333-4444" />
+            </div>
+            <div class="inputBox">
+              <span>exp month :</span>
+              <input type="text" placeholder="january" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>exp year :</span>
+                <input type="number" placeholder="2028" />
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input type="text" placeholder="1234" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+          <img src="tick.png" />
+          <h2>Thank You!</h2>
+          <p>Your details has been submitted successfully..!</p>
+          <button type="button" id="ok-button">OK</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const popup = document.getElementById("popup");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          popup.classList.add("open-popup");
+        });
+
+        function closePopup() {
+          popup.classList.remove("open-popup");
+        }
+
+        const okButton = document.getElementById("ok-button");
+        okButton.addEventListener("click", closePopup);
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+      <ul>
+        <li><a href="Page_Editor1.html">Page Editor</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

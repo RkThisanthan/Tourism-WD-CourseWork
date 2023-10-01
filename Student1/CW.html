@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Ceylon</title>
+  <link rel="stylesheet" href="CWstyle.css" />
+
+  <style>
+    #splash {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgb(14, 33, 75);
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transition: 0.5s;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #splash.fade {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="Presentation">
+    <img src="logo.png">
+    <h1>
+      <i><b>~ TRAVEL CEYLON ~</b></i>
+    </h1>
+    <div class="gallery">
+      <div class="content">
+        <img src="w1.jpg" />
+        <p>
+          <b>J.A.M.D.Jayasooriya</b><br />w1998660<br />20223141<br />(Student
+          1)
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="content">
+        <img src="w4.jpg" />
+        <p><b>R.Thisanthan</b><br />w1998661<br />20223209<br />(Student 2)</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="content">
+        <img src="w3.jpg" />
+        <p>
+          <b>N.T.Kumarasiri</b><br />w1986729<br />20223211<br />(Student 3)
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="content">
+        <img src="w2.jpg" />
+        <p>
+          <b>H.K.A.B.Jayasekara</b><br />w1986658<br />20223161<br />(Student 4)
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("Presentation").classList.toggle("fade");
+      window.location.href = "../Student2/MainPage.html"
+    }, 4000);
+  </script>
+</body>
+
+</html>

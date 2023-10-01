@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelCeylon</title>
+    <link rel="stylesheet" href="MainPage.css" />
+    <link rel="stylesheet" href="Nav.css" />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="PageEditor2.html" class="logo"
+            ><img src="Asserts/logo.png" alt="Logo" />
+          </a>
+        </li>
+        <li><a href="MainPage.html" class="active">Home</a></li>
+        <li><a href="../Student1/cart.html">Shop</a></li>
+        <li><a href="../Student3/Quiz.html">Quiz</a></li>
+        <li><a href="../Student4/ImageGallery.html">Gallery</a></li>
+        <li><a href="../Student4/SiteMap.html">Site Map</a></li>
+        <li><a href="Comments.html">Comments</a></li>
+        <li><a href="../Student3/AboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <button onclick="scrollToTop()" class="top-btn">Return to Top</button>
+
+    <div class="banner-card">
+      <h1>Welcome</h1>
+      <p>Discovering the beauty of</p>
+      <a href="../Student1/cart.html" class="button-link">Shop</a>
+    </div>
+
+    <div class="destinations">
+      <div class="heading">
+        <h2>| Top-destinations in Sri Lanka |</h2>
+        <p>EXPLORE A DIFFERENT WAY TO TRAVEL</p>
+      </div>
+      <div class="grid-container">
+        <a href="Colombo.html" class="grid-item">
+          <img src="Asserts/Colombo1.jpeg" alt="Colombo" />
+          <p class="image-description">Colombo</p>
+        </a>
+        <a href="../Student1/kandy.html" class="grid-item">
+          <img src="Asserts/kandy.jpeg" alt="kandy" />
+          <p class="image-description">Kandy</p>
+        </a>
+        <a href="../Student4/Galle.html" class="grid-item">
+          <img src="Asserts/Galle.webp" alt="Galle" />
+          <p class="image-description">Galle</p>
+        </a>
+        <a href="../Student3/Jaffna.html" class="grid-item">
+          <img src="Asserts/Jaffna.webp" alt="Jaffna" />
+          <p class="image-description">Jaffna</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="video-block">
+      <h3>Sri Lanka</h3>
+
+      <div class="video-container">
+        <video controls>
+          <source src="Asserts/SriLankaTourism.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      window.addEventListener("scroll", function () {
+        var topButton = document.querySelector(".top-btn");
+        if (window.scrollY >= 200) {
+          topButton.classList.add("show-top-btn");
+        } else {
+          topButton.classList.remove("show-top-btn");
+        }
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+      <ul>
+        <li><a href="PageEditor2.html">Page Editor</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

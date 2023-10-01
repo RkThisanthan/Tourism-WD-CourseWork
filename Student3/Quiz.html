@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta Data-->
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TravelCeylon</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="Quiz.css" />
+    <link rel="stylesheet" href="Nav.css" />
+    <link rel="stylesheet" href="Footer.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+
+    <nav>
+      <ul>
+        <li>
+          <a href="PageEditor3.html" class="logo"
+            ><img src="Asserts/logo.png" alt="Logo" />
+          </a>
+        </li>
+        <li><a href="../Student2/MainPage.html">Home</a></li>
+        <li><a href="../Student1/cart.html">Shop</a></li>
+        <li><a href="Quiz.html" class="active">Quiz</a></li>
+        <li><a href="../Student4/ImageGallery.html">Gallery</a></li>
+        <li><a href="../Student4/SiteMap.html">Site Map</a></li>
+        <li><a href="../Student2/Comments.html">Comments</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div id="quiz-container">
+      <div id="quiz-header">
+        <h1>
+          SRI LANKA QUIZ, HOW WELL DO YOU KNOW THE ULTIMATE HOLIDAY DESTINATION?
+        </h1>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+
+      <div id="quiz-body">
+        <div id="question-container">
+          <p id="question">Question goes here</p>
+          <div id="answer-container"></div>
+        </div>
+
+        <div id="controls-container">
+          <button id="next-btn">Next Question</button>
+          <button id="submit-btn">Submit Quiz</button>
+        </div>
+      </div>
+
+      <div id="quiz-summary">
+        <div id="summary-container">
+          <h2>Quiz Summary</h2>
+          <p id="summary-correct">
+            Number of Correct Answers: <span id="correct-count">0</span>
+          </p>
+          <p id="summary-time">
+            Time Spent: <span id="time-spent">0</span> seconds
+          </p>
+          <button id="restart-btn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+      <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+      <ul>
+        <li><a href="PageEditor3.html">Page Editor</a></li>
+      </ul>
+    </footer>
+    <!--footer-->
+
+    <script src="Quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelCeylon</title>
+    <link rel="stylesheet" href="Comments.css" />
+    <link rel="stylesheet" href="Nav.css" />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="PageEditor2.html" class="logo"
+            ><img src="Asserts/logo.png" alt="Logo" />
+          </a>
+        </li>
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="../Student1/cart.html">Shop</a></li>
+        <li><a href="../Student3/Quiz.html">Quiz</a></li>
+        <li><a href="../Student4/ImageGallery.html">Gallery</a></li>
+        <li><a href="../Student4/SiteMap.html">Site Map</a></li>
+        <li><a href="Comments.html" class="active">Comments</a></li>
+        <li><a href="../Student3/AboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <form
+        name="myform"
+        action="mailto:thisanthan.20223209@iit.ac.lk"
+        method="post"
+        enctype="text/plain"
+        onsubmit="showThankYouMessage()"
+      >
+        <label for="first_name"><b>YOUR NAME</b></label>
+        <input
+          type="text"
+          name="first_name"
+          placeholder="Enter Your Name"
+          id="first_name"
+          required
+        />
+        <label for="email"><b>YOUR E-MAIL ID</b></label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Your Email"
+          id="email"
+          required
+        />
+        <label for="AnyFeedback"><b>YOUR FEEDBACK</b></label>
+        <textarea
+          name="Any Feedback"
+          placeholder="Enter Your Comment"
+          cols="22"
+          rows="05"
+          id="AnyFeedback"
+          required
+        ></textarea>
+        <label for="howToComplete"
+          ><b
+            >HOW DID YOU WANT TO COMPLETE THIS TASK TODAY? (OPTIONAL)</b
+          ></label
+        >
+        <select name="selection1" id="howToComplete">
+          <option disabled selected>Please Select</option>
+          <option value="Phone">Phone</option>
+          <option value="Website">Website</option>
+          <option value="Webchat">Webchat</option>
+          <option value="Social media">Social media</option>
+          <option value="Email">Email</option>
+        </select>
+
+        <label for="howToCompleteAgain"
+          ><b
+            >IF YOU HAD TO COMPLETE THIS TASK AGAIN, <br />HOW WOULD YOU PREFER
+            TO DO IT? (OPTIONAL)</b
+          ></label
+        >
+        <select name="selection2" id="howToCompleteAgain">
+          <option disabled selected>Please Select</option>
+          <option value="Phone">Phone</option>
+          <option value="Website">Website</option>
+          <option value="Webchat">Webchat</option>
+          <option value="Social media">Social media</option>
+          <option value="Email">Email</option>
+        </select>
+
+        <label><b>PLEASE RATE OUR WEBSITE WITH YOUR USER EXPERIENCE</b></label
+        ><br />
+        <table>
+          <tr>
+            <td class="rate">Very Bad</td>
+            <td class="rate">Bad</td>
+            <td class="rate">Fair</td>
+            <td class="rate">Good</td>
+            <td class="rate">Very Good</td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="radio"
+                name="rate"
+                value="Very Bad"
+                id="verybad"
+                required
+              />
+            </td>
+            <td>
+              <input type="radio" name="rate" value="Bad" id="bad" required />
+            </td>
+            <td>
+              <input type="radio" name="rate" value="Fair" id="fair" required />
+            </td>
+            <td>
+              <input type="radio" name="rate" value="Good" id="good" required />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="rate"
+                value="Very Good"
+                id="verygood"
+                required
+              />
+            </td>
+          </tr>
+        </table>
+        <button class="submit" value="Send">Submit</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+      <ul>
+        <li><a href="PageEditor2.html">Page Editor</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      function showThankYouMessage() {
+        alert(
+          "Dear " +
+            document.getElementById("first_name").value +
+            ", Thank you very much for your feedback. You have rated our site as " +
+            document.querySelector('input[name="rate"]:checked').value +
+            "."
+        );
+      }
+    </script>
+  </body>
+</html>

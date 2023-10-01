@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+nav {
+  background-color: #125430;
+  height: 65px;
+  margin-bottom: 30px;
+  justify-content: center;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: cursive;
+  font-size: medium;
+}
+
+nav li img {
+  height: 60px;
+  width: 60px;
+}
+.logo:hover{
+  background-color: transparent;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: black;
+  background-color: aliceblue;
+  padding: 8px 20px;
+  border-radius: 50%;
+}
+
+nav ul li a.active {
+  background-color: #F07C39;
+  padding: 8px 15px;
+  color: black;
+  border-radius: 20%;
+
+}
+
+nav ul li a.active:hover {
+  background-color: aliceblue;
+  padding: 8px 15px;
+  color: black;
+  border-radius: 20%;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background-color: #125430;
+}
+
+.container form {
+  padding: 20px;
+  width: 700px;
+  background: #7ac591;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.container form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.container form .row .col {
+  flex: 1 1 250px;
+}
+
+.container form .row .col .title {
+  font-size: 20px;
+  color: #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox {
+  margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.btn {
+  color: #070707;
+  margin-left: 25%;
+  width: 50%;
+  padding: 10px 60px;
+  background: #8ce5a4;
+  outline-color: #0e3f30;
+  outline-style: groove;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background:#6fd649;
+}
+
+.popup {
+  width: 400px;
+  background: #d1cbcb;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  display: none;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  display: block;
+}
+
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+  margin-top: 20px;
+}
+
+.popup button {
+  width: 100%;
+  margin-top: 50%;
+  padding: 10px 0;
+  background: #6fd649;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button:hover{
+  color: #df3c39;
+}
+
+footer {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: medium;
+}
+
+footer p, li{
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer li a {
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="cart_style.css" />
+  <link rel="stylesheet" href="nav.css" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="Page_Editor1.html" class="logo"><img src="logo.png" alt="Logo" />
+        </a>
+      </li>
+      <li><a href="../Student2/MainPage.html">Home</a></li>
+      <li><a href="cart.html" class="active">Shop</a></li>
+      <li><a href="../Student3/Quiz.html">Quiz</a></li>
+      <li><a href="../Student4/ImageGallery.html">Gallery</a></li>
+      <li><a href="../Student4/SiteMap.html">Site Map</a></li>
+      <li><a href="../Student2/Comments.html">Comments</a></li>
+      <li><a href="../Student3/AboutUs.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1>Shopping Cart</h1>
+      <div class="shopping">
+        <img src="crt.png" />
+        <span class="quantity">0</span>
+      </div>
+    </header>
+    <div class="list"></div>
+  </div>
+
+  <div class="card">
+    <h1>Cart</h1>
+    <ul class="listCard"></ul>
+    <div class="checkOut">
+      <div class="total">0</div>
+      <div class="closeShopping">Close</div>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <a href="checkout.html" class="link" id="checkoutButton">CHECKOUT_PAGE</a>
+
+
+  <br />
+  <br />
+  <hr />
+
+  <footer>
+    <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+    <ul>
+      <li><a href="Page_Editor1.html">Page Editor</a></li>
+    </ul>
+  </footer>
+
+  <script src="cart_script.js"></script>
+
+
+  <script>
+    function handleCheckoutClick(event) {
+      event.preventDefault();
+
+      const cartQuantityElement = document.querySelector(".quantity");
+
+
+      const cartQuantity = parseInt(cartQuantityElement.innerText);
+
+      // Check if the cart is empty (quantity is 0)
+      if (cartQuantity === 0) {
+        const proceed = confirm("Your cart is empty. Do you want to proceed to checkout?");
+
+        if (!proceed) {
+          return;
+        }
+      }
+
+      // If the cart is not empty or the user clicked "OK," proceed to the checkout page
+      window.location.href = "checkout.html";
+    }
+
+    const checkoutButton = document.getElementById("checkoutButton");
+    checkoutButton.addEventListener("click", handleCheckoutClick);
+  </script>
+</body>
+
+</html>

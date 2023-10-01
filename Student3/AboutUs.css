@@ -1,0 +1,84 @@
+/* Reset default margins and paddings for all elements */
+* {
+  padding: 0;
+}
+
+/* Styling for the body element */
+body {
+  background-image: url("Asserts/background1.jpg"); /* Background image and color */
+  background-color: rgb(132, 205, 205);
+  background-size: cover;
+  color: rgb(72, 67, 67); /* Text color */
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  margin-left: 40px; /* Set margins */
+  margin-bottom: 20px;
+  margin-right: 30px;
+  box-sizing: border-box; /* Include padding and border in the box sizing calculation */
+  margin: 0;
+}
+
+/* Styling for cards */
+.card {
+  display: inline-block;
+  width: 220px; /* Card dimensions */
+  height: 220px;
+  margin-left: 40px; /* Set margins */
+  margin-bottom: 20px;
+  margin-right: 30px;
+  transition: 0.3s; /* Transition effect and cursor on hover */
+  cursor: pointer;
+}
+
+/* Card animation on hover */
+.card:hover {
+  height: 350px;
+  transform: scale(1.1); /* Increase card height and scale on hover */
+}
+
+/* Container display on card hover */
+.card:hover .container {
+  display: block;
+}
+
+.card:hover img {
+  opacity: 80%;
+}
+
+/* Container for details display on card hover */
+.container {
+  display: none;
+  text-align: center;
+  padding: 2px 16px;
+  color: black;
+}
+
+/* Container for displaying group members */
+.members-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+/* Styling for images */
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10%;
+  cursor: pointer;
+  justify-content: center;
+}
+
+/* Styling for the title of the member details */
+.detail-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}

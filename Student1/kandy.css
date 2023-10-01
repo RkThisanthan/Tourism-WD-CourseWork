@@ -1,0 +1,121 @@
+body {
+    background-image: url(kandy.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+
+.place {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+footer p, li{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    background-color: transparent;
+    height: 65px;
+    margin-bottom: 30px;
+    justify-content: center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: cursive;
+    font-size: medium;
+}
+
+nav li img {
+    height: 60px;
+    width: 60px;
+}
+.logo:hover{
+    background-color: transparent;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: black;
+    background-color: aliceblue;
+    padding: 8px 20px;
+    border-radius: 30%;
+}
+
+nav ul li a.active {
+    background-color: #F07C39;
+    padding: 8px 20px;
+    color: black;
+    border-radius: 30%;
+
+}
+
+nav ul li a.active:hover {
+    background-color: aliceblue;
+    padding: 8px 20px;
+    color: black;
+    border-radius: 30%;
+
+}

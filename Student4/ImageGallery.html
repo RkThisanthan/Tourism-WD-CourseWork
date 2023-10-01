@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="Nav.css">
+    <link rel="stylesheet" href="gallary.css"  >
+    <link rel="stylesheet" href="Footer.css" >
+    <title>TravelCeylon</title>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav>
+        <ul>
+          <li><a href="PageEditor.html" class="logo"><img src="Asserts/logo.png" alt="Logo"> </a></li>
+          <li><a href="../Student2/MainPage.html">Home</a></li>    
+          <li><a href="../Student1/cart.html">Shop</a></li>
+          <li><a href="../Student3/Quiz.html">Quiz</a></li>
+          <li><a href="ImageGallery.html" class="active">Gallery</a></li>
+          <li><a href="SiteMap.html" >Site Map</a></li>
+          <li><a href="../Student2/Comments.html" >Comments</a></li>
+          <li><a href="../Student3/AboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
+    <!-- Navbar End -->
+    
+    <div class="background1">
+        <div id="galleryImages">
+        <div class="image" >
+
+            <div class="allButtons">
+
+                <div class="textButton">
+                    <input id="slider" value="12" type="range" min="12" max="15"><!--image size min and max values -->
+                </div>
+                
+
+                <div class="color_button">
+                    <input type="button" class="button" id="button1" value="B" onclick="blue()"><!--color change -->
+                    <input type="button" class="button" id="button2" value="G" onclick="green()"><!--color change -->
+                    <input type="button" class="button" id="button3" value="P" onclick="purple()"><!--color change -->
+                    <input type="button" class="button" id="button4" value="A" onclick="Ash()"><!--color change -->
+                </div>
+
+            </div>
+            <h3 id="gallery">Gallery</h3>
+            <div class="column" >						
+                <img id="colombo"  class="sideImage" src="Asserts/colombo.jpg" alt="Colombo" onclick="displayImage(this)"> <!--expand Image when click -->
+                <div id="colomboText">
+                    <div class="contecntTExt">
+                        <h3>Colombo</h3>
+                        <p class="description">
+                            Colombo is the capital city of Sri Lanka, and the country's largest city in terms of population. Located on the west coast, it is a beautiful city surrounded by white sand beaches and an impressive harbourfront. Colombo is characterised by a series of canals, with the picturesque 160-acre Beira Lake at its centre.
+                        </p>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="column" >
+                <img id="kandy" class="sideImage" src="Asserts/kandy.jpg" alt="Kandy"   onclick="displayImage(this)"><!--expand Image when click -->
+                <div id="kandyText"> 
+                    <div class="contecntTExt">
+                        <h3>Kandy</h3>
+                        <p class="description">
+                            Kandy is both an administrative and religious city and is also the capital of the Central Province. Kandy is the home of the Temple of the Tooth Relic (Sri Dalada Maligawa), one of the most sacred places of worship in the Buddhist world. It was declared a World Heritage Site by UNESCO in 198
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="column" >
+                <img id="galle" class="sideImage" src="Asserts/galle.jpg"  alt="Galle"  onclick="displayImage(this)"><!--expand Image when click -->
+                <div id="galleText"> 
+
+                    <div class="contecntTExt">
+                        <h3>Galle</h3>
+                        <p class="description">
+                            Galle is a jewel. A Unesco World Heritage Site, this historic city is a delight to explore on foot, an endlessly exotic old trading port blessed with imposing Dutch-colonial buildings, ancient mosques and churches, grand mansions and museums.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column" >	
+                <img id="jaffna" class="sideImage" src="Asserts/jaffna.jpg" alt="Jaffna" onclick="displayImage(this)">
+                <div id="jaffnaText"> 
+                    <div class="contecntTExt">
+                        <h3>Jaffna</h3>
+                        <p class="description">
+                            Jaffna, port, northern Sri Lanka. It is situated on a flat, dry peninsula at the island's northern tip. The trading centre for the agricultural produce of the peninsula and nearby islands, it is linked with the rest of the country by road and a railway.ns.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <!--division reserved for the expanded image and the description which is initially hidden-->
+
+        
+
+    </div>			
+
+
+<div class="background2">
+    <div class="largeImage">
+        <img id="expandedImage"  src="Asserts/colombo.jpg" alt="expand" style="width: 38vh; height:21vw;" class="big">
+        <div id="description" class="big">
+            <div class="contecntTExt">
+                <h3>Colombo</h3>
+                <p class="description">
+                    Colombo is the capital city of Sri Lanka, and the country's largest city in terms of population. Located on the west coast, it is a beautiful city surrounded by white sand beaches and an impressive harbourfront. Colombo is characterised by a series of canals, with the picturesque 160-acre Beira Lake at its centre.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>    
+<div class="background3">
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 TravelCeylon. All rights reserved.</p>
+    <ul>
+      <li><a href="PageEditor.html">Page Editor</a></li>
+    </ul>
+  </footer>
+    <!-- Footer End -->
+
+
+<script>
+    function displayImage(image){
+     document.getElementById("galleryImages").scrollIntoView(); //focus the large image area
+     let largeImg = document.getElementById("expandedImage");
+     let imgtext = document.getAnimations("imgText");
+     largeImg.src = image.src;
+                 
+     if (image.id == "colombo"){						
+         document.getElementById("description").innerHTML = document.getElementById("colomboText").innerHTML;			
+     }else if(image.id == "kandy"){
+     document.getElementById("description").innerHTML = document.getElementById("kandyText").innerHTML;
+     }else if(image.id == "galle"){
+         document.getElementById("description").innerHTML = document.getElementById("galleText").innerHTML;
+     }else if(image.id == "jaffna"){
+         document.getElementById("description").innerHTML = document.getElementById("jaffnaText").innerHTML;
+     }
+     else {
+         document.getElementById("description").innerHTML = "";
+     }
+                 
+     largeImg.parentElement.style.display = "block";
+
+
+    
+ }
+      // color change button
+
+    let body = document.querySelector("body");
+     document.querySelector("#button1").addEventListener('click',function(){
+        body.style.backgroundColor=("#ec8c8c")
+     })
+
+     document.querySelector("#button2").addEventListener('click',function(){
+        body.style.backgroundColor=("rgb(210, 166, 252")
+     })
+     document.querySelector("#button3").addEventListener('click',function(){
+        body.style.backgroundColor=("#79d8dd")
+     })
+     document.querySelector("#button4").addEventListener('click',function(){
+        body.style.backgroundColor=("#333333")
+     })
+
+
+     // text size
+
+     slider.oninput = changeFontSize;
+
+     function changeFontSize(){
+        description.style.fontSize = this.value+"px";
+     }
+
+</script>
+</div>
+</body>
+</html>
